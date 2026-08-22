@@ -1,6 +1,6 @@
 [project]
 name = "shaply"
-version = "1.0.0"
+version = "1.0.1"
 description = "Usual SHAP explainability figures rendered as interactive Plotly charts."
 readme = "README.md"
 license = { text = "MIT" }
@@ -10,12 +10,15 @@ authors = [
 keywords = ["shap", "shapley", "plotly", "explainability", "xai", "machine-learning"]
 requires-python = ">=3.12.7"
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: Software Development :: Libraries :: Python Modules",
     "Typing :: Typed",
 ]
 dependencies = [
