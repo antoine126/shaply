@@ -1,5 +1,12 @@
 # shaply
 
+[![Tests](https://github.com/antoine126/shaply/actions/workflows/tests.yml/badge.svg)](https://github.com/antoine126/shaply/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/antoine126/shaply/branch/main/graph/badge.svg)](https://codecov.io/gh/antoine126/shaply)
+[![PyPI version](https://img.shields.io/pypi/v/shaply.svg)](https://pypi.org/project/shaply/)
+[![Python versions](https://img.shields.io/pypi/pyversions/shaply.svg)](https://pypi.org/project/shaply/)
+[![PyPI downloads](https://img.shields.io/pypi/dm/shaply.svg)](https://pypi.org/project/shaply/)
+[![License](https://img.shields.io/pypi/l/shaply.svg)](https://github.com/antoine126/shaply/blob/main/LICENSE)
+
 **Usual SHAP explainability figures, rendered as interactive [Plotly](https://plotly.com/python/) charts.**
 
 `shaply` reproduces the familiar figures from the [`shap`](https://github.com/shap/shap) library - bar, beeswarm, waterfall, dependence (scatter) and heatmap - but returns `plotly.graph_objects.Figure` objects instead of matplotlib axes, so the plots are interactive and embeddable out of the box.
