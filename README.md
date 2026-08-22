@@ -6,6 +6,7 @@
 [![Python versions](https://img.shields.io/pypi/pyversions/shaply.svg)](https://pypi.org/project/shaply/)
 [![PyPI downloads](https://img.shields.io/pypi/dm/shaply.svg)](https://pypi.org/project/shaply/)
 [![License](https://img.shields.io/pypi/l/shaply.svg)](https://github.com/antoine126/shaply/blob/main/LICENSE)
+[![Docs](https://img.shields.io/badge/docs-mkdocs--material-blue)](https://antoine126.github.io/shaply/)
 
 **Usual SHAP explainability figures, rendered as interactive [Plotly](https://plotly.com/python/) charts.**
 

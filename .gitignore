@@ -8,6 +8,7 @@ __pycache__/
 dist/
 build/
 *.whl
+site/
 
 # Envs & tooling caches
 .venv/
