@@ -1,6 +1,6 @@
 [project]
 name = "shaply"
-version = "1.0.1"
+version = "1.0.2"
 description = "Usual SHAP explainability figures rendered as interactive Plotly charts."
 readme = "README.md"
 license = { text = "MIT" }
