@@ -8,6 +8,8 @@
 [![License](https://img.shields.io/pypi/l/shaply.svg)](https://github.com/antoine126/shaply/blob/main/LICENSE)
 [![Docs](https://img.shields.io/badge/docs-mkdocs--material-blue)](https://antoine126.github.io/shaply/)
 
+![beeswarm_ranges](./media/beeswarm_ranges.png)
+
 **Usual SHAP explainability figures, rendered as interactive [Plotly](https://plotly.com/python/) charts.**
 
 `shaply` reproduces the familiar figures from the [`shap`](https://github.com/shap/shap) library - bar, beeswarm, waterfall, dependence (scatter) and heatmap - but returns `plotly.graph_objects.Figure` objects instead of matplotlib axes, so the plots are interactive and embeddable out of the box.
