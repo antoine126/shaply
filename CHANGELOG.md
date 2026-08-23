@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Support for Python 3.10 and 3.11. `shaply` now supports Python 3.10
+  through 3.13 (previously required `>=3.12.7`).
+- `shaply._compat`: internal backport of `enum.StrEnum` (added to the
+  standard library in Python 3.11) so `shaply.enums` behaves identically
+  on 3.10.
+
+### Changed
+
+- `requires-python` lowered from `>=3.12.7` to `>=3.10`.
+- CI test matrix now runs on Python 3.10, 3.11, 3.12 and 3.13 (was 3.12
+  and 3.13).
+- `ruff`'s `target-version` lowered to `py310` to match.
+
 ## [1.1.0] - 2026-08-23
 
 ### Added
