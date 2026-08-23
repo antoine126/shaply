@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-08-23
+
 ### Added
 
 - Support for Python 3.10 and 3.11. `shaply` now supports Python 3.10
@@ -21,6 +23,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CI test matrix now runs on Python 3.10, 3.11, 3.12 and 3.13 (was 3.12
   and 3.13).
 - `ruff`'s `target-version` lowered to `py310` to match.
+- Widened the `uv_build` build-backend upper bound from `<0.10.0` to
+  `<0.13.0`.
 
 ## [1.1.0] - 2026-08-23
 
@@ -99,7 +103,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   object, a raw NumPy array, or a pandas `DataFrame`.
 - Typed, validated configuration objects (Pydantic v2) for every plot.
 
-[Unreleased]: https://github.com/antoine126/shaply/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/antoine126/shaply/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/antoine126/shaply/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/antoine126/shaply/compare/v1.0.4...v1.1.0
 [1.0.4]: https://github.com/antoine126/shaply/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/antoine126/shaply/compare/v1.0.2...v1.0.3
