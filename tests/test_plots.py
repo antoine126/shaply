@@ -124,6 +124,43 @@ def test_beeswarm_ranges_requires_data(shap_values: np.ndarray) -> None:
         shaply.beeswarm_ranges(shap_values)
 
 
+def test_scatter_ranges_requires_data(shap_values: np.ndarray) -> None:
+    with pytest.raises(ValueError, match="requires feature values"):
+        shaply.scatter_ranges(shap_values, feature=0)
+
+
+def test_scatter_ranges_five_panels(fake_explanation: FakeExplanation) -> None:
+    fig = shaply.scatter_ranges(fake_explanation, feature="income")
+    kinds = [d.type for d in fig.data]
+    # Main scatter, gray "violin" (left) and gray "box" (right) are native
+    # Plotly traces; the gradient top box and bottom silhouette are hand-drawn
+    # as many "scatter" band traces instead (Plotly has no gradient fill).
+    assert kinds.count("violin") == 1
+    assert kinds.count("box") == 1
+    assert kinds.count("scatter") == len(kinds) - 2
+    assert len(kinds) > 2 + 10  # main scatter + several gradient bands, not one shape
+
+    # The top/bottom marginals are colored with the low->high scale, not gray.
+    fill_colors = {
+        d.fillcolor for d in fig.data if d.type == "scatter" and d.fill == "toself" and d.fillcolor
+    }
+    assert len(fill_colors) > 4
+
+    # The main scatter's marker color encodes the feature's own value.
+    scatter_trace = next(d for d in fig.data if d.type == "scatter" and d.mode == "markers")
+    assert scatter_trace.marker.colorscale is not None
+
+
+def test_scatter_ranges_unknown_feature(fake_explanation: FakeExplanation) -> None:
+    with pytest.raises(KeyError):
+        shaply.scatter_ranges(fake_explanation, feature="does_not_exist")
+
+
+def test_scatter_ranges_by_index(fake_explanation: FakeExplanation) -> None:
+    fig = shaply.scatter_ranges(fake_explanation, feature=0)
+    assert isinstance(fig, go.Figure)
+
+
 def test_ordering_alphabetical(fake_explanation: FakeExplanation) -> None:
     fig = shaply.bar(
         fake_explanation,

@@ -33,6 +33,7 @@ from shaply.config import (
     MonotonicityConfig,
     ResponseCurveConfig,
     ScatterConfig,
+    ScatterRangesConfig,
     ShapSurfaceConfig,
     WaterfallConfig,
 )
@@ -55,6 +56,7 @@ from shaply.plots import (
     monotonicity_check,
     response_curve,
     scatter,
+    scatter_ranges,
     shap_surface,
     waterfall,
 )
@@ -85,6 +87,7 @@ __all__ = [
     "PlotType",
     "ResponseCurveConfig",
     "ScatterConfig",
+    "ScatterRangesConfig",
     "ShapSurfaceConfig",
     "WaterfallConfig",
     "__version__",
@@ -103,6 +106,7 @@ __all__ = [
     "monotonicity_check",
     "response_curve",
     "scatter",
+    "scatter_ranges",
     "shap_surface",
     "to_explanation",
     "to_interaction_values",

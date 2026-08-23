@@ -114,6 +114,7 @@ These are `shaply`-only figures aimed at engineers and business-facing data scie
 | Function                          | What it shows                                                                                 | Insight                                                                                          |
 | --------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | `shaply.beeswarm_ranges`        | Beeswarm**+** real value distribution (violin + box, true min/max) per feature                | Read impact*and* concrete operating range on the same line                                     |
+| `shaply.scatter_ranges`         | Dependence scatter for one feature, framed by**both axes' distributions** (box + violin each) | Read the relationship*and* both distributions without a second figure                          |
 | `shaply.response_curve`         | Smoothed mean SHAP vs a feature's value, with a ±1 std band and auto-detected zero-crossings | The **tipping point** where a feature flips from lowering to raising the output           |
 | `shaply.interaction_heatmap`    | Matrix of mean\|SHAP interaction\| between feature pairs                                      | Which features**act together** (coupled effects), diagonal hidden by default               |
 | `shaply.error_analysis`         | Mean SHAP per feature,**correct vs mis-predicted** cohorts, ranked by gap               | What the model relies on differently**when it is wrong**                                   |
@@ -127,6 +128,9 @@ These are `shaply`-only figures aimed at engineers and business-facing data scie
 ```python
 # Beeswarm + real value ranges (needs feature values via data=...)
 shaply.beeswarm_ranges(explanation).show()
+
+# Dependence scatter for one feature, framed by both axes' distributions
+shaply.scatter_ranges(explanation, "temperature").show()
 
 # Response curve of one feature, with tipping-point detection
 shaply.response_curve(explanation, "temperature").show()

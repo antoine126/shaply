@@ -16,6 +16,7 @@ from shaply.plots.advanced.importance_ci import importance_ci
 from shaply.plots.advanced.interaction_heatmap import interaction_heatmap
 from shaply.plots.advanced.monotonicity import monotonicity_check
 from shaply.plots.advanced.response_curve import response_curve
+from shaply.plots.advanced.scatter_ranges import scatter_ranges
 from shaply.plots.advanced.shap_surface import shap_surface
 
 __all__ = [
@@ -28,5 +29,6 @@ __all__ = [
     "interaction_heatmap",
     "monotonicity_check",
     "response_curve",
+    "scatter_ranges",
     "shap_surface",
 ]

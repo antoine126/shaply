@@ -13,6 +13,7 @@ class PlotType(StrEnum):
     BEESWARM_RANGES = "beeswarm_ranges"
     WATERFALL = "waterfall"
     SCATTER = "scatter"
+    SCATTER_RANGES = "scatter_ranges"
     HEATMAP = "heatmap"
     FORCE = "force"
     DECISION = "decision"

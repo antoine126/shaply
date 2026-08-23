@@ -19,6 +19,7 @@ from shaply.plots.advanced import (
     interaction_heatmap,
     monotonicity_check,
     response_curve,
+    scatter_ranges,
     shap_surface,
 )
 from shaply.plots.usual import (
@@ -47,6 +48,7 @@ __all__ = [
     "monotonicity_check",
     "response_curve",
     "scatter",
+    "scatter_ranges",
     "shap_surface",
     "waterfall",
 ]

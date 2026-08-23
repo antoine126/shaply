@@ -40,4 +40,6 @@ construction.
 
 ::: shaply.ResponseCurveConfig
 
+::: shaply.ScatterRangesConfig
+
 ::: shaply.ShapSurfaceConfig

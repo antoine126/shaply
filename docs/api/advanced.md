@@ -20,4 +20,6 @@ Diagnostics and analyses that go beyond the standard `shap` figures.
 
 ::: shaply.response_curve
 
+::: shaply.scatter_ranges
+
 ::: shaply.shap_surface

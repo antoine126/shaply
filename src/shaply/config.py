@@ -95,6 +95,23 @@ class ScatterConfig(BasePlotConfig):
     opacity: float = Field(default=0.8, gt=0.0, le=1.0, description="Marker opacity.")
 
 
+class ScatterRangesConfig(BasePlotConfig):
+    """Configuration for the dependence scatter framed by marginal distributions."""
+
+    color_scale: ColorScale = Field(
+        default=ColorScale.RED_BLUE,
+        description="Color scale for the points and the two colored marginals.",
+    )
+    point_size: float = Field(default=6.0, gt=0, description="Marker size in pixels.")
+    opacity: float = Field(default=0.7, gt=0.0, le=1.0, description="Marker opacity.")
+    marginal_ratio: float = Field(
+        default=0.16,
+        gt=0.05,
+        lt=0.35,
+        description="Fraction of width/height given to each marginal panel.",
+    )
+
+
 class HeatmapConfig(BasePlotConfig):
     """Configuration for the instances-by-features heatmap."""
 
