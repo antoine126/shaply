@@ -197,9 +197,7 @@ def gradient_box_trace(
             value_edges = [edges[i], edges[i + 1], edges[i + 1], edges[i]]
             spread_edges = [baseline - half, baseline - half, baseline + half, baseline + half]
             x, y = (
-                (value_edges, spread_edges)
-                if orientation == "h"
-                else (spread_edges, value_edges)
+                (value_edges, spread_edges) if orientation == "h" else (spread_edges, value_edges)
             )
             traces.append(
                 go.Scatter(

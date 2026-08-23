@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-08-23
+
+### Added
+
+- `scatter_ranges`: new advanced plot - a dependence scatter for one feature
+  (real value on x, SHAP value on y) framed by both axes' marginal
+  distributions. The real-value box (top) and density silhouette (bottom)
+  are gradient-colored on the same low-to-high scale as the points; the
+  SHAP-value violin (left) and box (right) stay plain gray.
+- `ScatterRangesConfig`.
+
 ## [1.0.4] - 2026-08-23
 
 ### Added
@@ -73,7 +84,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   object, a raw NumPy array, or a pandas `DataFrame`.
 - Typed, validated configuration objects (Pydantic v2) for every plot.
 
-[Unreleased]: https://github.com/antoine126/shaply/compare/v1.0.4...HEAD
+[Unreleased]: https://github.com/antoine126/shaply/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/antoine126/shaply/compare/v1.0.4...v1.1.0
 [1.0.4]: https://github.com/antoine126/shaply/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/antoine126/shaply/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/antoine126/shaply/compare/v1.0.1...v1.0.2
