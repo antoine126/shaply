@@ -108,8 +108,12 @@ def test_decision_path_ends_at_prediction() -> None:
 def test_beeswarm_ranges_has_two_panels(fake_explanation: FakeExplanation) -> None:
     fig = shaply.beeswarm_ranges(fake_explanation)
     kinds = [d.type for d in fig.data]
-    assert "scatter" in kinds  # left impact panel
-    assert kinds.count("violin") == 4  # one violin per feature
+    assert "violin" not in kinds  # replaced by a hand-drawn gradient silhouette
+    assert kinds.count("scatter") == len(kinds)  # left impact panel + right silhouettes
+    assert len(kinds) > 4 * 10  # several color bands per feature row, not one shape each
+    # The silhouette is colored with the beeswarm's low->high scale, not a flat gray.
+    fill_colors = {d.fillcolor for d in fig.data if d.fill == "toself" and d.fillcolor}
+    assert len(fill_colors) > 4  # more than one color per feature => an actual gradient
     # Real min/max annotations are present for each feature (2 per row).
     range_labels = [a.text for a in fig.layout.annotations if a.xref == "x2"]
     assert len(range_labels) == 8
