@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
-from enum import IntEnum, StrEnum
+from enum import IntEnum
+
+from shaply._compat import StrEnum
 
 
 class PlotType(StrEnum):
